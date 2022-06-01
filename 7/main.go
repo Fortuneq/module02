@@ -17,7 +17,7 @@ func (g *Gym) Change_name(Newname string) {
 func home_page(w http.ResponseWriter, r *http.Request){
 	Master := Gym {}
 	tmpl,_ := template.ParseFiles("templates/site2.html")
-	tmpl.Execute(w,Master)
+	tmpl.ExecuteTemplate(w)
 }
 func contact_page(w http.ResponseWriter, r *http.Request){
 	fmt.Fprintf(w,"awsome balls")
